@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>List Product</title>
+</head>
+<body>
+	<table>
+		<tr><!--menandakan baris--> 
+		
+			<th>ID Product</th>
+			<th>Brand ID</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Type</th>
+		</tr>
+	
+		<tr th:each="product:${listProduct}"><!--sama dengan nama model--> 
+			<td th:text="${product.id}"></td>
+		
+
+			<td th:text="${product.brandId}"></td>
+		
+	
+			<td th:text="${product.name}"></td>
+		
+
+			<td th:text="${product.price}"></td>
+		
+
+			<td th:text="${product.type}"></td>
+		</tr>
+	
+	</table>
+</body>
+</html>
