@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>LIST BRAND</title>
+</head>
+<body>
+	<table>
+		<tr><!--menandakan baris--> 
+		
+
+			<th>Brand ID</th>
+			<th>Name</th>
+
+			<th>Product Type</th>
+		</tr>
+	
+		<tr th:each="brand:${listBrand}">
+			<td th:text="${brand.id}"></td>
+				
+			<td th:text="${brand.name}"></td>
+		
+			<td th:text="${brand.productType}"></td>
+			
+			<td><a href="#" th:href="${'/brand/delete/'+brand.id}">Delete</a> </td>
+			<td><a href="#" th:href="@{/brand/edit/}+${brand.id}">Edit</a> </td>			
+			
+		</tr>
+	
+	</table>
+
+</body>
+</html>
